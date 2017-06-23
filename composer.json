@@ -1,0 +1,35 @@
+{
+  "name": "w3scouts/addresses",
+  "description":"A Contao module to add more then one address to a member",
+  "keywords":["contao", "addresses", "addressbook", "members"],
+  "type": "contao-bundle",
+  "license": "LGPL-3.0+",
+  "authors": [
+    {
+      "name": "Darko Selesi",
+      "homepage": "https://github.com/w3scout/contao-addresses-bundle",
+      "role":"Developer"
+    }
+  ],
+  "require": {
+    "php": ">=5.6.0",
+    "contao/core-bundle": "^4.3"
+  },
+  "require-dev": {
+    "contao/manager-plugin": "^2.0"
+  },
+  "conflict": {
+    "contao/manager-plugin": "<2.0 || >=3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "W3Scout\\SpotifyBundle\\": "src/"
+    },
+    "classmap": [
+      "src/Resources/contao/"
+    ]
+  },
+  "extra": {
+    "contao-manager-plugin": "W3Scout\\AddressesBundle\\ContaoManager\\Plugin"
+  }
+}
