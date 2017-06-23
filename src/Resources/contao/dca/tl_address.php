@@ -40,7 +40,7 @@ $GLOBALS['TL_DCA']['tl_address'] = array
 	(
 		'ptable'					  => 'tl_member',
 		'dataContainer'               => 'Table',
-		'onsubmit_callback'           => array(array('w3scouts\addresses\Address', 'updateDefaultAddress')),
+		'onsubmit_callback'           => array(array('W3scout\Addresses\Address', 'updateDefaultAddress')),
         'sql' => array
         (
             'keys' => array
@@ -61,7 +61,7 @@ $GLOBALS['TL_DCA']['tl_address'] = array
 			'disableGrouping'		  => true,
 			'flag'                    => 1,
 			'panelLayout'             => 'filter;search,limit',
-			'child_record_callback'   => array('w3scouts\addresses\Address','renderLabel')
+			'child_record_callback'   => array('W3Scout\Addresses\Address','renderLabel')
 		),
 		'global_operations' => array
 		(
