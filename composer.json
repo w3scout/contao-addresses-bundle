@@ -1,5 +1,5 @@
 {
-  "name": "w3scouts/addresses",
+  "name": "w3scout/contao-addresses-bundle",
   "description":"A Contao module to add more then one address to a member",
   "keywords":["contao", "addresses", "addressbook", "members"],
   "type": "contao-bundle",
