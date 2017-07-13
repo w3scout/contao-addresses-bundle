@@ -1,2 +1,2 @@
-# contao-addresses-bundle
+# Contao Addresses Bundle
 
