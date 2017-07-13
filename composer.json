@@ -12,6 +12,7 @@
     }
   ],
   "support":{
+    "email":"hallo@w3scouts.com",
     "issues":"https://github.com/w3scout/contao-addresses-bundle/issues",
     "source":"https://github.com/w3scout/contao-addresses-bundle"
   },
@@ -23,7 +24,8 @@
     "contao/manager-plugin": "^2.0"
   },
   "conflict": {
-    "contao/manager-plugin": "<2.0 || >=3.0"
+    "contao/manager-plugin": "<2.0 || >=3.0",
+    "w3scouts/addresses": "*"
   },
   "autoload": {
     "psr-4": {
