@@ -1,5 +1,6 @@
 {
   "name": "w3scout/contao-addresses-bundle",
+  "homepage": "https://github.com/w3scout/contao-addresses-bundle",
   "description":"A Contao bundle to add more then one address to a member.",
   "keywords":["contao", "addresses", "addressbook", "members"],
   "type": "contao-bundle",
@@ -7,7 +8,7 @@
   "authors": [
     {
       "name": "Darko Selesi",
-      "homepage": "https://github.com/w3scout/contao-addresses-bundle",
+      "homepage": "https://w3scouts.com",
       "role":"Developer"
     }
   ],
