@@ -241,7 +241,7 @@ $GLOBALS['TL_DCA']['tl_address'] = array
 			'inputType'               => 'select',
 			'options'                 => array_keys($this->getCountries()),
 			'reference'               => $this->getCountries(),
-			'eval'                    => array('mandatory'=>true, 'includeBlankOption'=>true, 'tl_class'=>'w50'),
+			'eval'                    => array('mandatory'=>true, 'includeBlankOption'=>true, 'chosen'=>true, 'tl_class'=>'w50'),
             'sql'                     => "varchar(32) NOT NULL default ''"
 		),
 		'email' => array
