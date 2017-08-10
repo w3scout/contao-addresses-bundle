@@ -40,7 +40,9 @@ $GLOBALS['TL_DCA']['tl_address'] = array
 	(
 		'ptable'					  => 'tl_member',
 		'dataContainer'               => 'Table',
-		'onsubmit_callback'           => array(array('W3scout\Addresses\Address', 'updateDefaultAddress')),
+		'onsubmit_callback'           => array(
+		    array('W3Scout\Addresses\Address', 'updateDefaultAddress')
+        ),
         'sql' => array
         (
             'keys' => array

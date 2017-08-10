@@ -30,31 +30,26 @@
 namespace W3Scout\Addresses;
 
 
-class Address extends \Controller
+class Address extends \Backend
 {
-	public function __construct()
-	{
-		parent::__construct();
-		$this->import('Database');
-	}
-
 	public function renderLabel($arrAddress)
 	{
-		$image = $arrAddress['isPrivateAddress'] ? '<img src="system/modules/addresses/assets/private.png" style="vertical-align:-3px;" alt="'.$GLOBALS['TL_LANG']['tl_address']['isPrivateAddress'][0].'" title="'.$GLOBALS['TL_LANG']['tl_address']['isPrivateAddress'][0].'" /> ' : '<img src="system/modules/addresses/assets/business.png" style="vertical-align:-3px;" alt="'.$GLOBALS['TL_LANG']['tl_address']['business_address'].'" title="'.$GLOBALS['TL_LANG']['tl_address']['business_address'].'" /> ';
-		$image .= $arrAddress['isDefaultAddress'] ? '<img src="system/modules/addresses/assets/default_address.png" style="vertical-align:-3px;" alt="'.$GLOBALS['TL_LANG']['tl_address']['isDefaultAddress'][0].'" title="'.$GLOBALS['TL_LANG']['tl_address']['isDefaultAddress'][0].'" /> ' : '';
-		$image .= $arrAddress['isBillingAddress'] ? '<img src="system/modules/addresses/assets/billing.png" style="vertical-align:-3px;" alt="'.$GLOBALS['TL_LANG']['tl_address']['isBillingAddress'][0].'" title="'.$GLOBALS['TL_LANG']['tl_address']['isBillingAddress'][0].'" /> ' : '';
+		$image = $arrAddress['isPrivateAddress'] ? '<img src="bundles/w3scoutaddresses/private.png" style="vertical-align:-3px;" alt="'.$GLOBALS['TL_LANG']['tl_address']['isPrivateAddress'][0].'" title="'.$GLOBALS['TL_LANG']['tl_address']['isPrivateAddress'][0].'" /> ' : '<img src="bundles/w3scoutaddresses/business.png" style="vertical-align:-3px;" alt="'.$GLOBALS['TL_LANG']['tl_address']['business_address'].'" title="'.$GLOBALS['TL_LANG']['tl_address']['business_address'].'" /> ';
+		$image .= $arrAddress['isDefaultAddress'] ? '<img src="bundles/w3scoutaddresses/default_address.png" style="vertical-align:-3px;" alt="'.$GLOBALS['TL_LANG']['tl_address']['isDefaultAddress'][0].'" title="'.$GLOBALS['TL_LANG']['tl_address']['isDefaultAddress'][0].'" /> ' : '';
+		$image .= $arrAddress['isBillingAddress'] ? '<img src="bundles/w3scoutaddresses/billing.png" style="vertical-align:-3px;" alt="'.$GLOBALS['TL_LANG']['tl_address']['isBillingAddress'][0].'" title="'.$GLOBALS['TL_LANG']['tl_address']['isBillingAddress'][0].'" /> ' : '';
+
 		return $image.$arrAddress['firstname']." ".$arrAddress['lastname']." - ".$arrAddress['email']."";
 	}
 
 	public function updateDefaultAddress($dc)
 	{
-		if (\Input::post('isDefaultAddress'))
+	    if (\Input::post('isDefaultAddress'))
 		{
 			// Get current address to get pid
-			$address = $this->Database->prepare("SELECT pid FROM tl_address WHERE id = ?")->execute($dc->id);
+			$address = \Database::getInstance()->prepare("SELECT pid FROM tl_address WHERE id = ?")->execute($dc->id);
 			$memberId = $address->pid;
 			// Reset default address in all addresses of the current member
-			$this->Database->prepare("UPDATE tl_address SET isDefaultAddress = '0' WHERE pid = '".$memberId."' AND NOT id = '".$dc->id."'")->execute();
+            \Database::getInstance()->prepare("UPDATE tl_address SET isDefaultAddress = '0' WHERE pid = '".$memberId."' AND NOT id = '".$dc->id."'")->execute();
 
 			$firstname  = \Input::post('firstname');
 			$lastname   = \Input::post('lastname');
@@ -70,7 +65,7 @@ class Address extends \Controller
 			$fax        = \Input::post('fax');
 			$website    = \Input::post('website');
 
-			$this->Database->prepare("UPDATE tl_member
+            \Database::getInstance()->prepare("UPDATE tl_member
                                       SET firstname = '".$firstname."',
                                           lastname = '".$lastname."',
                                           company = '".$company."',
