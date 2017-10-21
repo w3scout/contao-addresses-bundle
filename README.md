@@ -7,6 +7,9 @@
 A Contao bundle to add more then one address to a member.
 
 ## Installation
+Install [composer](https://getcomposer.org) if you haven't already, then enter this command in the main directory of your Contao installation:
 ```sh
 composer require w3scout/contao-addresses-bundle
 ```
+## Usage
+...will be added soon...
