@@ -8,5 +8,5 @@ A Contao bundle to add more then one address to a member.
 
 ## Installation
 ```sh
-$ composer require w3scout/contao-addresses-bundle
+composer require w3scout/contao-addresses-bundle
 ```
