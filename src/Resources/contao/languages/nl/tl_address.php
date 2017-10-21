@@ -42,4 +42,3 @@ $GLOBALS['TL_LANG']['tl_address']['copy']['0'] = "Adres kopieren";
 $GLOBALS['TL_LANG']['tl_address']['copy']['1'] = "Dupliceer adres ID %s";
 $GLOBALS['TL_LANG']['tl_address']['delete']['0'] = "Adres verwijderen";
 $GLOBALS['TL_LANG']['tl_address']['delete']['1'] = "Verwijder adres ID %s";
- 

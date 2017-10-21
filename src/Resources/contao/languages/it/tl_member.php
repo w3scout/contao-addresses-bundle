@@ -31,3 +31,4 @@
  */
 $GLOBALS['TL_LANG']['tl_member']['addresses'][0]    = 'Indirizzi';
 $GLOBALS['TL_LANG']['tl_member']['addresses'][1]    = 'Gestisci gli indirizzi del membro con ID %s';
+

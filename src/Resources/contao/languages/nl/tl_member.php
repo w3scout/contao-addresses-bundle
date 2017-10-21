@@ -17,4 +17,3 @@
  
 $GLOBALS['TL_LANG']['tl_member']['addresses']['0'] = "Adressen";
 $GLOBALS['TL_LANG']['tl_member']['addresses']['1'] = "Beheer de adressen van lid ID %s";
-
