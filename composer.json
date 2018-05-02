@@ -2,7 +2,7 @@
   "name": "w3scout/contao-addresses-bundle",
   "homepage": "https://github.com/w3scout/contao-addresses-bundle",
   "description":"A Contao bundle to add more then one address to a member.",
-  "keywords":["contao", "addresses", "addressbook", "members"],
+  "keywords":["contao", "contao-bundle", "addresses", "addressbook", "members"],
   "type": "contao-bundle",
   "license": "LGPL-3.0+",
   "authors": [
@@ -19,7 +19,7 @@
   },
   "require": {
     "php": ">=5.6.0",
-    "contao/core-bundle": "^4.3"
+    "contao/core-bundle": "^4.4"
   },
   "require-dev": {
     "contao/manager-plugin": "^2.0"
